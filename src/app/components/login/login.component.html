@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+  <link rel="stylesheet" href="login.component.css">
+</head>
+<body>  
+  <div class="col">
+  <div class="row md-6 col-md-9" style="margin-left:165px">
+
+    <img src="assets/images/broball.jpg" style="width:100%;height:452px;margin-bottom: px;" alt="Windows Firewall" id="logo">
+    </div>
+    <div class="row md-6">
+  <form action="#" class="login-form" style="margin-left: 413px; background-color:black;">
+    
+    <h1>Giriş Yap </h1>
+    <div class="textb">
+      <input type="email"  id="mail" placeholder="...@gmail.com">
+      
+    </div>
+
+    <div class="textb">
+      <input type="password" id="pass" placeholder="****">
+      
+      <div class="show-password fas fa-eye-slash"></div>
+    </div>
+
+    <div class="checkbox">
+      <input type="checkbox">
+      <div class="fas fa-check"></div>
+      Beni Hatırla
+    </div>
+    
+    <button class="btn fas fa-arrow-right"type="submit" (click)="userLogin()"></button>
+
+    <a href="/register">Hesap Oluştur</a>
+    <a data-bs-toggle="modal" data-bs-target="#exampleModal" href ="/register">Şifremi Unuttum</a>
+    <a data-bs-toggle="modal" data-bs-target="#exampleModal1" href ="/register">Email Doğrulama</a>
+  </form>
+  </div>
+</div>
+<div class="modal fade"  id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" >
+    <div class="modal-content" style="background-color: black;">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Şifremi Unuttum Ekranı</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class = "textb" >
+        <input type="mail"  id="mailgonder" placeholder="...@gmail.com">
+        <br>
+        <button  type="" class="" style="margin-left: 50px;"(click)="sendMail()" >ŞİFREMİ GÖNDER</button>
+        <br>
+        
+
+
+      </div>
+      <div class="modal-footer">
+        
+        <button type="button" class=" btn-primary"data-bs-dismiss="modal">Onayla</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade"  id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" >
+    <div class="modal-content" style="background-color: black;">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Email Doğrulama Ekranı</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class = "textb" >
+        <input type="mail"  id="mailgonder2" placeholder="...@gmail.com">
+        <br>
+        <button  type="" class="" style="margin-left: 50px;"(click)="sendMail2()" >Doğrula</button>
+        <br>
+        
+
+
+      </div>
+      <div class="modal-footer">
+        
+        <button type="button" class=" btn-primary"data-bs-dismiss="modal">Onayla</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+ 
+</body>
+</html>

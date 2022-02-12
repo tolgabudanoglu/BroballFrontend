@@ -1,0 +1,119 @@
+<div class="container-fluid">
+    <div class="main-body">
+      <div class="row-gutters-sm">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-body">
+              <form class="row g-3 needs-validation" novalidate>
+                <a> Turnavalara girmek istediğiniz takımı oluşturun</a>
+                <div class="col-md-4">
+  
+  
+  
+                  <label for="validationCustom01" class="form-label">Takımınızın İsmini Giriniz</label>
+                  <input type="text" class="form-control" id="takımAdı" value="" required>
+                  
+  
+                </div>
+                
+                
+                <div class="col-md-4">
+                  <label for="validationCustom02" class="form-label">Maç yapabileceğiniz şehiri giriniz</label>
+                  <input type="text" class="form-control" id="takımCity" value="" required>
+  
+                </div>
+                <div class="row g-3 ">
+                <div class="col-md-3">
+                  <label for="validationCustom02" class="form-label">1. oyuncuyu giriniz</label>
+                  <input type="text" class="form-control" id="oyuncu1" value="" required>
+                 
+                </div>
+                <div class="col-md-3">
+                  <label for="validationCustom02" class="form-label">2. oyuncuyu giriniz</label>
+                  <input type="text" class="form-control" id="oyuncu2" value="" required>
+                 
+                </div>
+                <div class="col-md-3">
+                  <label for="validationCustom02" class="form-label">3. oyuncuyu giriniz</label>
+                  <input type="text" class="form-control" id="oyuncu3" value="" required>
+                 
+                </div>
+                <div class="col-md-3">
+                  <label for="validationCustom02" class="form-label">4. oyuncuyu giriniz</label>
+                  <input type="text" class="form-control" id="oyuncu4" value="" required>
+                 
+                </div>
+                
+                </div>
+  
+                <div class="col-md-3">
+                  <label for="validationCustom01" class="form-label"> 5. oyuncuyu giriniz</label>
+                  <input type="text" class="form-control" id="oyuncu5" value="" required>
+  
+                </div>
+
+                <div class="col-md-3">
+                  <label for="validationCustom01" class="form-label"> 6. oyuncuyu giriniz</label>
+                  <input type="text" class="form-control" id="oyuncu6" value="" required>
+  
+                </div>
+
+                <div class="col-md-3">
+                  <label for="validationCustom01" class="form-label"> 7. oyuncuyu giriniz</label>
+                  <input type="text" class="form-control" id="oyuncu7" value="" required>
+  
+                </div>
+                <div class="col-md-3">
+                  <label for="validationCustom01" class="form-label"> 8. oyuncuyu giriniz</label>
+                  <input type="text" class="form-control" id="oyuncu8" value="" required>
+  
+                </div>
+  
+                
+                  
+  
+                  
+                
+  
+                <div class="row g-3 ">
+  
+                 
+  
+                 
+                  <div class="col-12">
+                    <script>
+                      var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+                      var alertTrigger = document.getElementById('liveAlertBtn')
+    
+                      function alert(message, type) {
+                        var wrapper = document.createElement('div')
+                        wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
+    
+                        alertPlaceholder.append(wrapper)
+                      }
+    
+                      if (alertTrigger) {
+                        alertTrigger.addEventListener('click', function () {
+                          alert('Nice, you triggered this alert message!', 'success')
+                        })
+                      }
+                    </script>
+    
+                    <div id="liveAlertPlaceholder"></div>
+                    <button type="button" class="btn btn-primary" style="background-color: green;"
+                      id="liveAlertBtn"  (click)="addTeam() ">Takımı Oluştur</button>
+                  </div>
+  
+                </div>
+              
+  
+  
+  
+  
+  
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

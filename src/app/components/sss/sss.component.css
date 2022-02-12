@@ -1,0 +1,5 @@
+.btn:disabled{
+    background-color: transparent;
+    color:black;
+    border: 2px solid;
+  }

@@ -1,0 +1,51 @@
+<div  class="row ">
+  <div class="col">
+    <div class="card h-100">
+      <div style="background-color:rgb(0, 0, 0)" class="card-body">
+        <h6 style="color: #fff;" class="d-flex align-items-center mb-3">Cezalı Listesi</h6>
+        <hr>
+        <div class="row">
+          <div  class="col">
+            <table style="color: #fff;" class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">First</th>
+                  <th scope="col">Last</th>
+                  <th scope="col">Username</th>
+                  <th scope="col">Ceza Sebebi</th>
+
+                </tr>
+              </thead>
+              <tbody>
+
+
+                
+                  <tr *ngFor="let user of users">
+                    <td>{{user.userId}}</td>
+                    <td>{{user.name}}</td>
+                    <td>{{user.lastName}}</td>
+                    <td>{{user.nickName}}</td>
+                    <td>{{user.reasonforPenalty}}</td>
+                    
+                    
+                
+                
+                  </tr>
+                  
+                
+</table>
+
+          </div>
+
+        </div>
+       
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+

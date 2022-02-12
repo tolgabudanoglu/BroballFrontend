@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ 
+
+<!-- ----------------------------------------------------------- -->
+            
+<!-- --------------------------------------------------------- -->
+     
+<div class="row g-0">
+  <div class="col-sm-6 col-md-10"> 
+     <div class="card">
+          <div class="card-body">
+            <div class="row g-0">
+              <img src="assets/images/broball.gif" class="col-sm-6 col-md-8" style="width:100%;height:500px;margin-bottom: 0px;;"
+                  alt="Windows Firewall" id="logo">
+              </div>
+          
+              <div class="row">
+              
+                <div class="col">
+                  <h1>Halısahalar</h1>
+                  <table class="col-sm-6 col-md-6">
+                    <tr *ngFor="let field of fields | filterPipe:filterText">
+                      <td>{{field.fieldName}}</td>
+                    </tr>
+                  </table>
+                </div>
+
+                <div class="col">
+                  <h1>Takımlar</h1>
+                  <table class="col-sm-6 col-md-6">
+                    <tr *ngFor="let team of teams | filterPipe2:filterText2">
+                      <td>{{team.teamName}}</td>
+                    </tr>
+                  </table>
+                </div>
+
+
+                <div class="col">
+                  <h1>Oyuncular</h1>
+                  <table class="col-sm-6 col-md-6">
+                    <tr *ngFor="let user of users | filterPipe3:filterText3">
+                      <td>{{user.name}}</td>
+                    </tr>
+                  </table>
+                </div>
+
+
+              </div>
+         </div>
+
+        
+    </div>
+  </div>
+
+
+
+
+  <div class="col-6 col-md-2">
+    <div class="card">
+      <div class="card-body">
+        <div class="mb-3">
+         <label style="font-weight: 900">Halısaha Filtreleme</label>
+           <hr />
+              <div class="mb-3">
+                  <label for="filterText" class="form-label">Halısaha Ara</label>
+                  <input type="text" [(ngModel)]="filterText"  class="form-control" id="filterText"
+                  placeholder="Arama ifadesi giriniz" >
+              </div>
+              <div>
+                {{filterText}} aradınız
+              </div>
+      </div>
+
+   
+
+          <!-- Şehir Filtreleme Özelliği--------------------------------------------------------------------------------- -->
+          <div class="form-group">
+            <select multiple class="form-control" [class]="getAllCityClass()" routerLink="/fields">Tüm Halısahalar
+            <option (click)="setCurrentCity(city)" 
+            routerLink="/fields/city/{{city.citiesId}}"
+            *ngFor="let city of cities "
+            [class]="getCurrentCityClass(city)"
+            >{{city.cityName}}</option>
+          </select>
+          </div>
+    
+          <h5 *ngIf="currentCity">{{currentCity.cityName}} seçtiniz</h5>
+          <!-- --------------------------------------------------------------------------------------------------------- -->
+    
+    
+    
+
+
+
+
+
+
+      <br />
+      <hr />
+      <label style="font-weight: 900">Takım Filtreleme</label>
+      <hr />
+      <label style="font-weight: 700">Takım Adı</label>
+      <input
+        type="text"
+        [(ngModel)]="filterText2"
+        class="form-control"
+        id="filterText2"
+        placeholder="Halısaha ismi"
+      />
+      <div *ngIf="filterText2" class="alert alert-success">
+        {{ filterText2 }} aradınız
+      </div>
+     
+      <br />
+      <br />
+<!-- Halısaha Filtreleme------------------------------------- -->
+      <div class="form-group">
+        <select multiple class="form-control" [class]="getAllCityClass()" routerLink="/fields">Tüm Halısahalar
+        <option (click)="setCurrentLeague(league)" 
+        routerLink="/teams/league/{{league.leagueId}}"
+        *ngFor="let league of leagues"
+        [class]="getCurrentLeagueClass(league)"
+        >{{league.leagueName}}</option>
+      </select>
+      </div>
+
+      <h5 *ngIf="currentLeague">{{currentLeague.leagueName}} seçtiniz</h5>
+<!-- ------------------------------------------------------------------- -->
+
+        <label style="font-weight: 900">Oyuncu Arama</label>
+        <hr />
+        <label style="font-weight: 700">Oyuncu Adı</label>
+        <input
+          type="text"
+          [(ngModel)]="filterText3"
+          class="form-control"
+          id="filterText3"
+          placeholder="Oyuncu ismi"
+        />
+        <div *ngIf="filterText3" class="alert alert-success">
+          {{ filterText3 }} aradınız
+        </div>
+
+
+
+    </div>
+  </div>
+</div>
+
+    </div>
+
+</body>
+</html>

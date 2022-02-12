@@ -1,0 +1,50 @@
+
+<div class="row ">
+    <div class="col">
+      <div class="card h-100">
+        <div style="background-color:rgb(0, 0, 0)" class="card-body">
+
+
+    
+      
+        <h6 style="color: #fff;" class="d-flex align-items-center mb-3">Takım İstatistik </h6>
+        <hr>
+
+
+        <table style="color: #fff;" class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Takım İsmi </th>
+              <th scope="col">Galibiyet Sayısı</th>
+              <th scope="col">Yenilgi Sayısı</th>
+              <th scope="col">Beraberlik Sayısı</th>
+             
+              <th scope="col">Puan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="color:#fff;" *ngFor="let team of teams">
+              <th scope="col">{{team.teamId}}</th>
+              
+              <td>{{team.teamName}}</td>
+              <td>{{team.won}}</td>
+              <td>{{team.lost}}</td>
+              <td>{{team.drawn}}</td>
+              <td>{{team.points}}</td>
+
+
+
+
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+     
+    </div>
+
+  </div>
+  </div>
+    
+    

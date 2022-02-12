@@ -1,0 +1,17 @@
+body{
+    margin-top: 20px;
+    
+}
+.main-body{
+    padding: 15px;
+    margin:auto;
+}
+#btn-search{
+    margin-top: 20px;
+    padding-right: 15px;
+}
+#card-hali{
+    padding-bottom: 300px;
+}
+#hourinput{
+}

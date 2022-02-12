@@ -1,0 +1,80 @@
+<div class="row ">
+    <div class="col">
+      <div class="card h-100">
+        <div class="card-body" style="background-color:rgb(0, 0, 0);color:#fff;">
+
+
+          
+        
+
+          <h6 class="d-flex align-items-center mb-3">Oyuncu İstatistik</h6>
+          <hr>
+          <div class="row">
+            <div class="col">
+
+              <table class="table" >
+                <thead>
+                  <tr style="color:#fff;">
+                    <th scope="col">#</th>
+
+                    <th scope="col">Nickname</th>
+                    <th scope="col">Takımı</th>
+                    <th scope="col">pozisyonu</th>
+                    <th scope="col">gol sayısı</th>
+                    <th scope="col">asist sayısı</th>
+                    <th scope="col">puanı</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                  <tr style="color:#fff;" *ngFor="let user of users">
+
+
+                    
+
+                    <th  scope="col">{{user.userId}}</th>
+                    <td>{{user.nickName}}</td>
+                    <td>{{user.team}}</td>
+                    <td>{{user.position}}</td>
+                    <td>{{user.score}}</td>
+                    <td>{{user.asist}}</td>
+                    <td>{{user.starPoint}}</td>
+
+
+
+
+                  </tr>
+
+
+
+                  <tr>
+
+                </tbody>
+              </table>
+              
+
+
+            </div>
+
+
+
+
+
+
+            <tr>
+
+
+
+          </div>
+         
+
+
+        </div>
+      </div>
+    </div>
+    
+
+
+  </div>
