@@ -10,27 +10,27 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     
         <div class="container-fluid">
-          <a class="navbar-brand" href="/home">Broball</a>
+          <a class="navbar-brand" [routerLink]="['/home']" routerLinkActive="router-link-active">Broball</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/home">Home</a>
+                <a class="nav-link active" aria-current="page"  [routerLink]="['/home']" routerLinkActive="router-link-active">Home</a>
               </li>
               
               <li>
-                <a class="nav-link" href="/register">Register</a>
+                <a class="nav-link"  [routerLink]="['/register']" routerLinkActive="router-link-active">Register</a>
               </li>
               <li>
-                <a class="nav-link" href="/startball">Lets Start</a>
+                <a class="nav-link"  [routerLink]="['/startball']" routerLinkActive="router-link-active">Lets Start</a>
               </li>
               <li>
-                <a class="nav-link" href="/oyuncuSıralama">oyuncu istatistik</a>
+                <a class="nav-link"  [routerLink]="['/oyuncusıralama']" routerLinkActive="router-link-active">oyuncu istatistik</a>
               </li>
               <li>
-                <a class="nav-link" href="/takımsıralama">takım istatistik</a>
+                <a class="nav-link" [routerLink]="['/takımsıralama']" routerLinkActive="router-link-active">takım istatistik</a>
               </li>
             
            
@@ -40,21 +40,21 @@
              
                    
                     <div class="dropdown">
-                      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" style="margin-top:5px; margin-right: 90px;" data-bs-toggle="dropdown" aria-expanded="false">
+                      <a class="btn btn-secondary dropdown-toggle" [routerLink]="['#']" routerLinkActive="router-link-active" role="button" id="dropdownMenuLink" style="margin-top:5px; margin-right: 90px;" data-bs-toggle="dropdown" aria-expanded="false">
                      
                       </a>
                     
                       <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                        
-                        <li><a class="dropdown-item" href="/startball">Hadi Maça</a></li>
-                        <li><a class="dropdown-item" href="/halisahabilgi">Halısaha Bilgisi Ekleme</a></li>
-                        <li><a class="dropdown-item" href="/ceza">Cezalı Listesi</a></li>
-                        <li><a class="dropdown-item" href="/sss">SSS</a></li>
-                        <li><a class="dropdown-item" href="/sss">Bize Sorun</a></li>
-                        <li><a class="dropdown-item" href="/maclardanGoruntular">maçlardan görüntüler</a></li>
-                        <li><a class="dropdown-item" href="/about">Biz Kimiz</a></li>
-                        <li><a class="dropdown-item" href="/create">Takım Oluşturma</a></li>
-                        <li><a class="dropdown-item" href="/login">Çıkış yap</a></li>
+                        <li><a class="dropdown-item"  [routerLink]="['/startball']" routerLinkActive="router-link-active">Hadi Maça</a></li>
+                        <li><a class="dropdown-item"  [routerLink]="['/halisahabilgi']" routerLinkActive="router-link-active">Halısaha Bilgisi Ekleme</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/ceza']" routerLinkActive="router-link-active">Cezalı Listesi</a></li>
+                        <li><a class="dropdown-item"  [routerLink]="['/sss']" routerLinkActive="router-link-active">SSS</a></li>
+                        <li><a class="dropdown-item"   [routerLink]="['/sss']" routerLinkActive="router-link-active">Bize Sorun</a></li>
+                        <li><a class="dropdown-item"  [routerLink]="['/maclardanGoruntuler']" routerLinkActive="router-link-active">maçlardan görüntüler</a></li>
+                        <li><a class="dropdown-item"   [routerLink]="['/about']" routerLinkActive="router-link-active">Biz Kimiz</a></li>
+                        <li><a class="dropdown-item"  [routerLink]="['/create']" routerLinkActive="router-link-active">Takım Oluşturma</a></li>
+                        <li><a class="dropdown-item"  [routerLink]="['/login']" routerLinkActive="router-link-active">Çıkış yap</a></li>
                       </ul>
                     </div>                 
                 

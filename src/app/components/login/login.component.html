@@ -36,9 +36,9 @@
     
     <button class="btn fas fa-arrow-right"type="submit" (click)="userLogin()"></button>
 
-    <a href="/register">Hesap Oluştur</a>
-    <a data-bs-toggle="modal" data-bs-target="#exampleModal" href ="/register">Şifremi Unuttum</a>
-    <a data-bs-toggle="modal" data-bs-target="#exampleModal1" href ="/register">Email Doğrulama</a>
+    <a  [routerLink]="['/register']" routerLinkActive="router-link-active">Hesap Oluştur</a>
+    <a data-bs-toggle="modal" data-bs-target="#exampleModal"[routerLink]="['/register']" routerLinkActive="router-link-active">Şifremi Unuttum</a>
+    <a data-bs-toggle="modal" data-bs-target="#exampleModal1"[routerLink]="['/register']" routerLinkActive="router-link-active">Email Doğrulama</a>
   </form>
   </div>
 </div>
