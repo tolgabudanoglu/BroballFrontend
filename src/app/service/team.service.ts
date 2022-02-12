@@ -8,7 +8,7 @@ import { ResponseModel } from '../models/response-model';
     providedIn:'root'
 })
 export class TeamService {
-  apiUrl = 'http://broball.somee.com/IIS/';
+  apiUrl = 'http://broball.somee.com/IIS';
   apiUrl2="http://broball.somee.com/IIS/api/"
     constructor(private httpClient:HttpClient) { }
 

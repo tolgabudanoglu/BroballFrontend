@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
     providedIn:'root'
 })
 export class InqueryService {
-    apiUrl = 'http://broball.somee.com/IIS/';
+    apiUrl = 'http://broball.somee.com/IIS';
     apiUrl2="http://broball.somee.com/IIS/api/"
     constructor(private httpClient:HttpClient) { }
 

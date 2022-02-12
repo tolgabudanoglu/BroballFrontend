@@ -9,7 +9,7 @@ import { itemResponseModel } from '../models/itemResponseModel';
     providedIn:'root'
 })
 export class ProductService {
-  apiUrl = 'http://broball.somee.com/IIS/';
+  apiUrl = 'http://broball.somee.com/IIS';
   apiUrl2="http://broball.somee.com/IIS/api/"
 
     constructor(private httpClient:HttpClient) { }

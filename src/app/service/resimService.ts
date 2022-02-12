@@ -9,7 +9,7 @@ import { Resim } from '../models/resim';
     providedIn:'root'
 })
 export class ResimService {
-  apiUrl = 'http://broball.somee.com/IIS/';
+  apiUrl = 'http://broball.somee.com/IIS';
 
     constructor(private httpClient:HttpClient) {}
 

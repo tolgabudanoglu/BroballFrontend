@@ -8,7 +8,7 @@ import { ResponseModel } from '../models/response-model';
     providedIn:'root'
 })
 export class CreditCardService {
-    apiUrl = 'http://broball.somee.com/IIS/';
+    apiUrl = 'http://broball.somee.com/IIS';
 
     constructor(private httpClient:HttpClient) {}
 

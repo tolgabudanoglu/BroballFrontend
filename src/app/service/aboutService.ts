@@ -9,7 +9,7 @@ import { ListResponseModel } from '../models/listResponseModel';
   providedIn: 'root'
 })
 export class AboutService {
-  apiUrl = 'http://broball.somee.com/IIS/';
+  apiUrl = 'http://broball.somee.com/IIS';
 
   constructor(private httpClient:HttpClient) { }
 

@@ -9,7 +9,7 @@ import { ListResponse } from '../models/listResponse';
   providedIn: 'root',
 })
 export class UserService {
-  apiUrl = 'http://broball.somee.com/IIS/';
+  apiUrl = 'http://broball.somee.com/IIS';
   apiUrl2="http://broball.somee.com/IIS/api/"
   constructor(private httpClient: HttpClient) {}
 
@@ -17,13 +17,13 @@ export class UserService {
     mail: string,
     password: string
   ): Observable<ListResponseModel<User>> {
-    let newPath = this.apiUrl + 'Login?mail=' + mail + '&password=' + password;
+    let newPath = this.apiUrl + '/Login?mail=' + mail + '&password=' + password;
     return this.httpClient.get<ListResponseModel<User>>(newPath);
   }
 
   updateUser(user: User): Observable<ResponseModel> {
     return this.httpClient.put<ResponseModel>
-  (this.apiUrl + 'putUser', user);
+  (this.apiUrl + '/putUser', user);
   }
   registerUser(user: User): Observable<ResponseModel> {
     console.log(User);
