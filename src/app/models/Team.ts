@@ -14,7 +14,7 @@ export class Team{
     oyuncu7 : string |any;
     oyuncu8 : string |any;
     city : string  |any;
-    leagueId:number;
+    leagueId:number=4;
 
 
 

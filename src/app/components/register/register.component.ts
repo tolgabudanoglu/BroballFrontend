@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 import { User } from 'src/app/models/user';
 import { UserService } from 'src/app/service/user.service';
 declare var $: any;
@@ -14,7 +14,7 @@ export class RegisterComponent implements OnInit {
   user = new User();
   
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService,private router:Router) {}
 
   ngOnInit(): void {}
   
@@ -45,7 +45,7 @@ export class RegisterComponent implements OnInit {
       this.result = res.success;
 
       if (this.result) {
-        window.location.href = '/login';
+        this.router.navigateByUrl('/home');
       } else {
         window.alert('Kayıt Yapılamadı Lütfen Bilgilerinizi Kontrol Ediniz');
       }

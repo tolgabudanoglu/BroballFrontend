@@ -26,7 +26,7 @@ export class UserService {
   (this.apiUrl + '/putUser', user);
   }
   registerUser(user: User): Observable<ResponseModel> {
-    console.log(User);
+    console.log(user);
     return this.httpClient.post<ResponseModel>(this.apiUrl + "/post", user);
   }
   getUserByEmail(mail: string): Observable<ListResponseModel<User>>{

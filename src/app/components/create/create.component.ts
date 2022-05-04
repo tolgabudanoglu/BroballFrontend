@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Team } from 'src/app/models/Team';
 import { TeamService } from 'src/app/service/team.service';
 
@@ -15,7 +16,7 @@ export class CreateComponent implements OnInit {
 
   result: boolean;
   team = new Team();
-  constructor(private teamService : TeamService) { }
+  constructor(private teamService : TeamService,private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -43,7 +44,7 @@ export class CreateComponent implements OnInit {
 
     if(this.result){
       window.alert('takım kaydı yapıldı');
-      window.location.href ='/startball';
+      this.router.navigateByUrl ("/startball");
     }else{
       window.alert('yapılmadı');
     }

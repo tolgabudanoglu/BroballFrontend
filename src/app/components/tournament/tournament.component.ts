@@ -19,6 +19,7 @@ export class TournamentComponent implements OnInit {
 
   ngOnInit(): void {
     this.getUsers();
+    this.getTeams();
   }
 
 

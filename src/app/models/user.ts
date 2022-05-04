@@ -11,13 +11,13 @@ export class User{
     asist:number  ;
     dateOfBirth:Date  ;
     tel:string  ;
-    reasonforPenalty:string  ;
+    reasonOfPenalty:string  ;
     adress:string  ;
     email:string  ;
-    teamId:number=32;
+    teamId:number=6;
     starPoint:number  ;
     citiesId:number  ;
-    leagueId:number  ;
+    leagueId:number=4  ;
     subscribeId:number=1;
     website:string  ;
     twitter:string  ;

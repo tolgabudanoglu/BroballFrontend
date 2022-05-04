@@ -52,7 +52,7 @@ export class LoginComponent implements OnInit {
   }
   sendMail(){
     this.userService.sendMail($('#mailgonder').val()).subscribe(resp=>{
-      window.alert(resp.message+"fadime")
+      window.alert(resp.message)
       
     })
   }

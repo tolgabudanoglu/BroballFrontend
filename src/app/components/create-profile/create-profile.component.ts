@@ -133,7 +133,7 @@ export class CreateProfileComponent implements OnInit {
     var id=parseInt(q.split('createprofile/')[1]);
     this.userService.getReasonForPenaltyByUserId(id).subscribe((response) => {
     this.pass=response.data;
-      this.user.reasonforPenalty=this.pass;
+      this.user.reasonOfPenalty=this.pass;
        });
   }
   getScoreByUserId() {

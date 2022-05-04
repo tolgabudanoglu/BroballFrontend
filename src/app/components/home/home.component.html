@@ -48,6 +48,8 @@
                   <table class="col-sm-6 col-md-6">
                     <tr *ngFor="let user of users | filterPipe3:filterText3">
                       <td>{{user.name}}</td>
+                      <td>{{user.lastName}}</td>
+                      <td>{{user.starPoint}}</td>
                     </tr>
                   </table>
                 </div>
@@ -72,7 +74,7 @@
               <div class="mb-3">
                   <label for="filterText" class="form-label">Halısaha Ara</label>
                   <input type="text" [(ngModel)]="filterText"  class="form-control" id="filterText"
-                  placeholder="Arama ifadesi giriniz" >
+                  placeholder="Halısaha Adı Giriniz" >
               </div>
               <div>
                 {{filterText}} aradınız
@@ -113,7 +115,7 @@
         [(ngModel)]="filterText2"
         class="form-control"
         id="filterText2"
-        placeholder="Halısaha ismi"
+        placeholder="Takım Adı Giriniz"
       />
       <div *ngIf="filterText2" class="alert alert-success">
         {{ filterText2 }} aradınız
@@ -157,5 +159,35 @@
 
     </div>
 
+    <div class="container" style="margin-bottom: 2rem; margin-top: 1rem">
+      <h3 class="text-center text-danger p-2 m-0">Mevcut İstatistikler</h3>
+      <table class="table table-reflow p-0 m-0 text-center table-striped">
+        <tbody>
+          <tr class="text-center text-danger"   >
+            <td style="color: red">Oyuncu Sayısı</td>
+            <td style="color: red">Takım Sayısı</td>
+            <td style="color: red">Lig Sayısı</td>
+            
+          </tr>
+          <tr *ngFor="let league of leagues" ></tr>
+          <tr class="text-center text-muted" >
+            <td><span class="counter">{{users.length}}</span></td>
+            <td><span class="counter">{{teams.length}}</span></td>
+            <td><span class="counter">{{leagues.length}}</span></td>
+          
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-12">
+      <div class="gradient-overlay id:levha   text-center" style="background-color: black;">
+        <div class="container py-5" style="color:green; font-size: 31px; font-style: italic;">
+          Bu sitenin tüm hakları GrayBeards ekibine aittir.
+  
+  
+        </div>
+      </div>
+    </div>
 </body>
 </html>

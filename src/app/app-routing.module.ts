@@ -23,6 +23,7 @@ const routes: Routes = [
   {path:"",pathMatch:"full",component:HomeComponent},
   {path:'profile/:id',component:ProfileComponent},
   {path:"home/:userId",component:HomeComponent},
+  {path:"home",component:HomeComponent},
   {path:"startball",component:StartballComponent},
   {path:"register",component:RegisterComponent},
   {path:"login",component:LoginComponent},
@@ -33,16 +34,13 @@ const routes: Routes = [
   {path:"halisahabilgi",component:FieldinfoComponent},
   {path:"oyuncuSıralama",component:PlayerboardComponent},
   {path:"takımsıralama" , component:LeaderboardsComponent},
-  {path:"maclardanGoruntular",component:GoruntularComponent},
+  {path:"maclardanGoruntuler",component:GoruntularComponent},
   {path:"about",component:AboutComponent},
   {path:"fields",component:HomeComponent},
   {path:"fields/city/:citiesId",component:HomeComponent},
   {path:"teams",component:HomeComponent},
   {path:"teams/league/:leagueId",component:HomeComponent},
-  {
-    path: 'register',
-    component: RegisterComponent,
-  },
+ 
   {
     path: 'profile/:userId',
     component: ProfileComponent,
@@ -58,7 +56,7 @@ const routes: Routes = [
 
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
